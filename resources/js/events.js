@@ -27,11 +27,6 @@ const events = [
 	{
 		title: 'KCDC',
 		start: '2020-06-27',
-		end: '2020-06-30'
-	},
-	{
-		title: 'KCDC',
-		start: '2020-07-01',
 		end: '2020-07-03'
 	},
 	{
