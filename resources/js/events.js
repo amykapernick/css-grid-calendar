@@ -2,12 +2,7 @@ const events = [
 	{
 		title: 'NDC London',
 		start: '2020-01-27',
-		end: '2020-01-31',
-	},
-	{
-		title: 'NDC London',
-		start: '2020-02-01',
-		end: '2020-01-02',
+		end: '2020-02-02',
 	},
 	{
 		title: 'Ignite Sydney',
@@ -42,7 +37,7 @@ const events = [
 	{
 		title: 'NDC Melbourne',
 		start: '2020-07-28',
-		end: '2020-08-30'
+		end: '2020-07-30'
 	},
 	{
 		title: 'DDD Perth',
