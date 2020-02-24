@@ -13,7 +13,7 @@
 			<h1>2020</h1>
 			<div class="dates">
 				{% for day in year %}
-					<div data-day="{{day.day}}" style="--month: {{day.month}}; --date: {{day.date}}; --day: {{day.day}}; --offset: {{day.offset}};" class="date">
+					<div data-monthName="{{day.monthName}}" style="--month: {{day.month}}; --date: {{day.date}}; --day: {{day.day}}; --offset: {{day.offset}};" class="date">
 						<h2>{{day.date}}</h2>
 					</div>
 				{% endfor %}
