@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'Recursive';
+	src: url("./fonts/recursive.ttf") format("truetype");
+  }
+
+  body {
+	background: #36454f;
+	font-family: 'Recursive', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .year {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	padding: 10px 20px;
+	min-height: 100vh;
+  }
+  
+  h1 {
+	font-size: 3em;
+	color: #85caf6;
+	text-align: center;
+	margin-top: 0;
+  }
+  
+  h2 {
+	color: #36454f;
+	margin: 0 0 1em;
+  }
+  
+  .dates {
+	border-top: 1px solid #85caf6;
+	display: grid;
+	grid-template-rows: repeat(12, minmax(min-content, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+	grid-gap: 5px;
+	position: relative;
+  }
+  
+  .date {
+	background: rgba(133, 202, 246, 0.8);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-start;
+	grid-column: var(--offset);
+	grid-row: var(--month);
+	padding: 5px;
+  }
+
+  .date:before {
+	color: #eef1f6;
+	content: attr(data-day);
+	position: absolute;
+	top: -1.3em;
+  }
+
+  .date[data-monthName]:after {
+	content: attr(data-monthName);
+	color: #ca8ef6;
+	font-size: 3em;
+	font-weight: bold;
+	position: absolute;
+	left: calc(var(--offset) * 50px);
+	z-index: -1;
+  }
+  
+  .event {
+	background: #86f394;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: end;
+	grid-column: var(--offset) / span var(--length);
+	grid-row-start: var(--row);
+  }
+  

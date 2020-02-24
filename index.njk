@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Year in a View</title>
+		<link rel="stylesheet" href="/css/main.css"/>
+	</head>
+
+	<body>
+		<div class="year y-2020">
+			<h1>2020</h1>
+			<div class="dates">
+				{% for day in year %}
+					<div data-day="{{day.day}}" style="--month: {{day.month}}; --date: {{day.date}}; --day: {{day.day}}; --offset: {{day.offset}};" class="date">
+						<h2>{{day.date}}</h2>
+					</div>
+				{% endfor %}
+
+				{% for event in events %}
+					<div class="event" style="--offset: {{event.offset}}; --length: {{event.length}}; --row: {{event.row}}">
+						{{event.title}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+
+</html>

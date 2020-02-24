@@ -2,11 +2,15 @@
   "name": "css-grid-calendar",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.njk",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "eleventy --serve --port=$PORT",
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "Amy Kapernick <amy@aimhigherweb.design> (https://amyskapers.dev)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
 }
