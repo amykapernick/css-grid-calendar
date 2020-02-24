@@ -66,7 +66,7 @@
 	z-index: -1;
   }
   
-  .event {
+.event {
 	background: #86f394;
 	padding: 5px;
 	display: flex;
@@ -75,5 +75,5 @@
 	align-self: end;
 	grid-column: var(--offset) / span var(--length);
 	grid-row-start: var(--row);
-  }
+}
   

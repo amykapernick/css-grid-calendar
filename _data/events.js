@@ -1,4 +1,4 @@
-const eventList = require('../resources/js/events.js')
+const eventList = require('../resources/data/events.js')
 
 module.exports = () => {
 	const events = []

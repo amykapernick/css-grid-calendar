@@ -10,6 +10,11 @@ const events = [
 		end: '2020-02-15',
 	},
 	{
+		title: 'MVP Summit',
+		start: '2020-03-14',
+		end: '2020-03-21',
+	},
+	{
 		title: 'NDC Porto',
 		start: '2020-04-20',
 		end: '2020-04-28',
