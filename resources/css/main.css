@@ -50,7 +50,7 @@
   }
 
   .date[data-day="Sat"], .date[data-day="Sun"] {
-	background: #eedbf2;
+	background: #85caf6;
   }
 
   .date:before {
