@@ -49,6 +49,10 @@
 	padding: 5px;
   }
 
+  .date[data-day="Sat"], .date[data-day="Sun"] {
+	background: #eedbf2;
+  }
+
   .date:before {
 	color: #eef1f6;
 	content: attr(data-day);
