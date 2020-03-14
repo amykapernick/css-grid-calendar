@@ -2,6 +2,7 @@ module.exports = eleventyConfig => {
 	// Static resources
 	eleventyConfig.addPassthroughCopy({ 'resources/fonts': 'fonts' })
 	eleventyConfig.addPassthroughCopy({ 'resources/css': 'css' })
+	eleventyConfig.addPassthroughCopy({ 'resources/img': 'img' })
 
 	return {
 		dir: {
