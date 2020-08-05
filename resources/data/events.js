@@ -97,8 +97,8 @@ const events = [
 	},
 	{
 		title: 'Twilio Signal',
-		start: '2020-09-27',
-		end: '2020-10-03',
+		start: '2020-09-30',
+		end: '2020-10-01',
 		status: 'online'
 	},
 	{
