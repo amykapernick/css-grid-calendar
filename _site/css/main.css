@@ -49,6 +49,10 @@
 	padding: 5px;
   }
 
+  .date[data-day="Sat"], .date[data-day="Sun"] {
+	background: #85caf6;
+  }
+
   .date:before {
 	color: #eef1f6;
 	content: attr(data-day);
@@ -68,6 +72,8 @@
   
 .event {
 	background: #86f394;
+	background: var(--colour);
+	border: 2px solid var(--border);
 	padding: 5px;
 	display: flex;
 	align-items: center;
@@ -75,5 +81,18 @@
 	align-self: end;
 	grid-column: var(--offset) / span var(--length);
 	grid-row-start: var(--row);
+	position: relative;
+}
+
+.event:before {
+	display: none;
+	content: var(--icon);
+	position: absolute;
+	font-size: 0.8em;
+	top: -0.8em;
+	left: -0.8em;
 }
   
+.event:hover:before {
+	display: block;
+}

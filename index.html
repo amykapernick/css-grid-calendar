@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Year in a View</title>
-		<link rel="stylesheet" href="/css/main.css"/>
-		<link rel="shortcut icon" href="/img/favicon.png"/>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Year in a View</title>
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="shortcut icon" href="/img/favicon.png" />
+</head>
 
-	<body>
-		<div class="year y-2020">
-			<h1>2020</h1>
-			<div class="dates">
-				{% for day in year %}
-					<div data-monthName="{{day.monthName}}" data-day="{{day.day}}" style="--month: {{day.month}}; --offset: {{day.offset}};" class="date">
-						<h2>{{day.date}}</h2>
-					</div>
-				{% endfor %}
-
-				{% for event in events %}
-					<div class="event" style="--offset: {{event.offset}}; --length: {{event.length}}; --row: {{event.row}}">
-						{{event.title}}
-					</div>
-				{% endfor %}
+<body>
+	<div class="year y-2020">
+		<h1>2020</h1>
+		<div class="dates">
+			{% for day in year %}
+			<div data-monthName="{{day.monthName}}" data-day="{{day.day}}" style="--month: {{day.month}}; --offset: {{day.offset}};" class="date">
+				<h2>{{day.date}}</h2>
 			</div>
+			{% endfor %}
+
+			{% for event in events %}
+			{% switch event.status %}
+			{% case "cancelled" %}
+			{% set colour = '#f2778f' %}
+			{% set border = '#e6103a' %}
+			{% set icon = '❌' %}
+			{% case "moved" %}
+			{% set colour = '#FFA07A' %}
+			{% set border = '#ff540f' %}
+			{% set icon = '➡' %}
+			{% case "online" %}
+			{% set colour = '#FFFACD' %}
+			{% set border = '#ffe814' %}
+			{% set icon = '🌐' %}
+			{% default %}
+			{% set colour = '#86f394' %}
+			{% set border = '#0cf22a' %}
+			{% set icon = '' %}
+			{% endswitch %}
+			<div class="event" data-status="{{event.status}}" style="--offset: {{event.offset}}; --length: {{event.length}}; --row: {{event.row}}; --colour: {{colour}}; --border: {{border}}; --icon: '{{icon}}'">
+				{{event.title}}
+			</div>
+			{% endfor %}
 		</div>
-	</body>
+	</div>
+</body>
 
 </html>

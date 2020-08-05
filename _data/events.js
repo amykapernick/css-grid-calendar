@@ -7,7 +7,7 @@ module.exports = () => {
 
 	allEvents.forEach(event => {
 		const start = new Date(event.start),
-		end = new Date(event.end)
+		end = event.end ? new Date(event.end) : start
 		
 		if(start.getMonth() !== end.getMonth()) {
 			let dates = [
@@ -36,20 +36,22 @@ module.exports = () => {
 			allEvents.push({
 				title: event.title,
 				start: fullDates[1][0],
-				end: fullDates[1][1]
+				end: fullDates[1][1],
+				status: event.status
 			})
 		}
 	}) 
 
 	allEvents.forEach(event => {
 		const start = new Date(event.start),
-		  end = new Date(event.end),
+		  end = event.end ? new Date(event.end) : start,
 		  firstOffset = new Date(new Date(event.start).setDate(1)).getDay() + start.getDate()
 		
 		let	length = end.getDate() - start.getDate() + 1
 
 		events.push({
 			title: event.title,
+			status: event.status,
 			offset: firstOffset,
 			length,
 			row: start.getMonth() + 1
