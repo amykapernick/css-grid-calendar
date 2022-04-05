@@ -1,6 +1,6 @@
 module.exports = () => {
-	const start = new Date('1 Jan 2020'),
-		end = new Date('1 Jan 2021'),
+	const start = new Date('1 Jan 2022'),
+		end = new Date('1 Jan 2023'),
 		days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'],
 		months =  ['January','February','March','April','May','June','July', 'August','September','October','November','December']
 
