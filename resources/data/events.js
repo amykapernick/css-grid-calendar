@@ -10,8 +10,8 @@ const events = [
 	},
 	{
 		title: 'NDC Oslo',
-		start: '2022-10-26',
-		end: '2022-10-30',
+		start: '2022-09-26',
+		end: '2022-09-30',
 	},
 ]
 
